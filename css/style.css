@@ -243,13 +243,61 @@
 }
 
 
+/* SERVICE SECTION */
+.service{
+    margin-top: 250px;
+}
+.service .container{
+    margin: auto;
+}
+.service .row1{
+    text-align: center;
+}
+.service .heading{
+    margin-top: 20px;
+}
+.service .row2{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    position: relative;
+}
+.box .bg-hover{
+    background: rgba(30, 111, 92, 0.52);
+    backdrop-filter: blur(13px);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0.3% at 100% 0);
+    transition: .4s ease-in-out;
+}
+.box:hover .bg-hover{
+    clip-path: circle(141.2% at 100% 0);
+        transition: .4s ease-in-out;
+}
+.bg-hover .bg-text{
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
 
 
 /* RESPONSIVE */
 
 /* SMALL DESKTOP */
 @media screen and (max-width: 1500px) {
-    .navbar, .home, .panel{
+    .navbar, .home, .panel, .service{
         padding: 0 10px;
     }
     .swiper img{
@@ -274,12 +322,16 @@
     .icon-item i{
         font-size: 40px;
     }
+    .box img{
+        max-width: 320px;
+        width: 100%;
+    }
 }
 
 
 /* TABLET */
 @media screen and (max-width: 768px) {
-    .panel{
+    .panel, .service{
         margin-top: 200px;
     }
     .navbar .menu{
@@ -349,11 +401,21 @@
     .panel .item{
         margin-top: 40px;
     }
+    .service .row2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .row2 .box{
+        margin: 10px;
+    }
 }
 
 /* MOBILE */
 @media screen and (max-width: 576px) {
-    .panel{
+    .heading{
+        font-size: 26px;
+    }
+    .panel, .service{
         margin-top: 150px;
     }
     .navbar{
@@ -404,6 +466,9 @@
     }
     .text-item .heading-item{
         font-size: 20px;
+    }
+    .service .row1{
+        text-align: start;
     }
     
 }
