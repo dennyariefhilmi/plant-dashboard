@@ -7,6 +7,10 @@ $(document).ready(() => {
         $('.menu-wrapper').removeClass('active')
     })
 
+    $('.btn-card-product').click((e) => {
+        alert('Terimakasih sudah order😃')
+        e.preventDefault()
+    })
 
 })
 
@@ -27,6 +31,7 @@ $(window).scroll(function () {
     }
 })
 
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -39,4 +44,33 @@ var swiper = new Swiper(".mySwiper", {
         delay: 2000
     }
 
+});
+
+var swiper = new Swiper(".mySwiperProduct", {
+    slidesPerView: 4,
+    spaceBetween: 50,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".bxs-chevron-right-circle",
+        prevEl: ".bxs-chevron-left-circle",
+        disabledClass: "bxs-chevron-circle-disable"
+    },
+    breakpoints: {
+        320: {
+            spaceBetween: 20,
+            slidesPerView: "auto",
+            centeredSlides: true,
+        },
+        768: {
+            spaceBetween: 20,
+            slidesPerView: 3,
+        },
+        1200: {
+            spaceBetween: 40,
+            slidesPerView: 4,
+        }
+    }
 });
