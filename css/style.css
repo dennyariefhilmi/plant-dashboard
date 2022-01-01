@@ -509,13 +509,85 @@ width: 700px;
     cursor: pointer;
 }
 
-
+/* FOOTER SECTION */    
+.footer{
+    margin-top: 250px;
+    background-color: var(--primary-color);
+    border-radius: 50px 50px 0px 0px;
+}
+.footer .container{
+    margin: auto;
+}
+.footer .row1{
+  padding: 90px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .row1 .logo{
+    font-family: var(--heading-font);
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--button-color);
+}
+.footer .row1 .logo span{
+    color: var(--heading-color);
+}
+.footer .row1 .column-left p{
+    margin-top: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+.column-left .sosmed{
+    margin-top: 50px;
+}
+.sosmed i{
+    font-size: 40px;
+    color: var(--button-color);
+}
+.footer .row1 .column-right{
+    display: flex;
+}
+.footer .row1 .column-right .col-3 p{
+    font-size: 20px;
+    color: #fff;
+}
+.column-right .col-3 .map{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--button-color);
+}
+.footer .row1 .column-right > div{
+    margin: 0 40px;
+}
+.footer .row1 .column-right h3{
+    font-family: var(--heading-font);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+.row1 .column-right ul li{
+    margin-top: 30px;
+}
+.row1 .column-right ul a{
+    font-size: 20px;
+    color: #fff;
+}
+.footer .row2{
+    text-align: center;
+    padding: 5px 0;
+}
+.footer .row2 p{
+    font-size: 20px;
+    color: #fff;
+}
 
 /* RESPONSIVE */
 
 /* SMALL DESKTOP */
 @media screen and (max-width: 1500px) {
-    .navbar, .home, .panel, .service, .banner, .product, .testi, .contact{
+    .navbar, .home, .panel, .service, .banner, .product, .testi, .contact, .footer{
         padding: 0 10px;
     }
     .home .swiper img{
@@ -551,6 +623,9 @@ width: 700px;
     }
     .contact .container {
         align-items: center;
+    }
+    .footer{
+        border-radius: 40px 40px 0 0;
     }
 }
 
@@ -700,6 +775,9 @@ width: 700px;
     .contact .content-right{
         margin-top: 50px;
     }
+    .footer .row1 .column-right{
+        flex-wrap: wrap;
+    }
 }
 
 /* MOBILE */
@@ -817,6 +895,24 @@ width: 700px;
         max-width: 300px;
         width: 100%;
         margin-top: 40px;
+    }
+    .footer .row1{
+        flex-wrap: wrap;
+    }
+    .footer .row1 .column-right{
+        margin-top: 40px;
+    }
+    .footer .row1 .column-right > div{
+        margin: 0;
+    }
+    .row1 .column-right .col-2{
+        margin-left: 30px !important;
+    }
+    .row1 .column-right .col-3{
+        margin-top: 30px !important;
+    }
+    .footer{
+        border-radius: 20px 20px 0 0 ;
     }
 }
 
