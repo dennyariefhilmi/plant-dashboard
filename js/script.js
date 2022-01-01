@@ -12,6 +12,11 @@ $(document).ready(() => {
         e.preventDefault()
     })
 
+    $('.btn-contact').click((e) => {
+        alert('Email anda telah terkirim😃')
+        e.preventDefault()
+    })
+
 })
 
 $(document).ready(function () {
@@ -72,5 +77,16 @@ var swiper = new Swiper(".mySwiperProduct", {
             spaceBetween: 40,
             slidesPerView: 4,
         }
+    }
+});
+
+var swiper = new Swiper(".mySwiperTesti", {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    autoplay: {
+        delay: 3000
     }
 });

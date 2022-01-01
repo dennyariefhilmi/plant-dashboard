@@ -390,9 +390,124 @@
     color: #e6dd3b80;
 }
 
-/* Swiper Produk */
+/* TESTIMONI SECTION */
+.testi{
+    margin-top: 250px;
+}
+.testi .container{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.testi .content-left .text{
+    font-size: 20px;
+    margin-top: 30px;
+    width: 450px;
+}
+.testi .card-testi{
+    display: flex;
+    align-items: center;
+    background: #1E6F5C;
+border-radius: 50px 10px;
+padding: 20px 40px;
+position: relative;
+width: 700px;
+}
+.testi .swiper{
+    width: 700px;
+}
+
+.card-testi .body-testi{
+    width: 460px;
+    padding: 50px 40px;
+    position: relative;
+}
+.body-testi .text-testi{
+    font-size: 18px;
+    color: #fff;
+}
+.card-testi .body-testi i{
+    color: var(--heading-color);
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-testi .profile{
+    margin-right: 30px;
+    text-align: center;
+}
+.card-testi .profile .name{
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--heading-color);
+    margin-top: 15px;
+}
+.card-testi .profile .alamat{
+    font-size: 18px;
+    color: #fff;
+    margin-top: 7px;
+}
+.card-testi .date{
+    font-family: var(--heading-color);
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.685);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
 
+/* CONTACT SECTION */
+.contact{
+    margin-top: 250px;
+}
+.contact .container{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contact .heading{
+    width: 420px;
+}
+.contact .content-left img{
+    max-width: 500px;
+    width: 100%;
+    margin-top: 40px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact input{
+    width: 700px;
+    border: 2px solid var(--primary-color);
+}
+.contact input:focus, .contact textarea:focus{
+    background-color: var(--primary-color);
+    color: #fff;
+   outline: none;
+}
+.contact textarea{
+    border: 2px solid var(--primary-color);
+}
+
+.contact input, .contact textarea, .contact button{
+    margin: 10px 0;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.contact button{
+    border: none;
+    background-color: var(--button-color);
+    font-size: 18px;
+    font-family: var(--heading-color);
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+}
 
 
 
@@ -400,7 +515,7 @@
 
 /* SMALL DESKTOP */
 @media screen and (max-width: 1500px) {
-    .navbar, .home, .panel, .service, .banner, .product{
+    .navbar, .home, .panel, .service, .banner, .product, .testi, .contact{
         padding: 0 10px;
     }
     .home .swiper img{
@@ -429,12 +544,20 @@
         max-width: 320px;
         width: 100%;
     }
+    .contact input, .contact textarea, .contact button{
+        margin: 10px 0;
+        padding: 10px 30px;
+        border-radius: 10px;
+    }
+    .contact .container {
+        align-items: center;
+    }
 }
 
 
 /* TABLET */
 @media screen and (max-width: 768px) {
-    .panel, .service, .banner, .product{
+    .panel, .service, .banner, .product, .testi{
         margin-top: 200px;
     }
     .navbar .menu{
@@ -549,6 +672,34 @@
     .product .row2{
         margin-top: 60px;
     }
+    
+    .testi .container{
+        flex-wrap: wrap;
+    }
+    .testi .swiper{
+        margin-top: 100px;
+    }
+    .testi .card-testi{
+        display: flex;
+        align-items: center;
+        background: #1E6F5C;
+        border-radius: 50px 10px;
+        padding: 20px 40px;
+        position: relative;
+        width: 600px;
+    }
+    .testi .swiper{
+        width: 600px;
+    }
+    
+
+    .contact .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact .content-right{
+        margin-top: 50px;
+    }
 }
 
 /* MOBILE */
@@ -632,6 +783,40 @@
     }
     .product .swiper-slide{
         width: 300px !important;
+    }
+
+    .testi .content-left .text{
+        font-size: 16px;
+        width: 300px;
+    }
+    .testi .card-testi{
+        flex-wrap: wrap;
+    }
+    .card-testi .profile img{
+        width: 90px;
+        height: 90px;
+    }
+    .card-testi .profile .name{
+        font-size: 16px;
+    }
+    .card-testi .profile .alamat{
+        font-size: 14px;
+    }
+    .testi .swiper{
+        margin-top: 50px;
+    }
+
+    .contact input{
+        width: 100%;
+        border: 2px solid var(--primary-color);
+    }
+    .contact .heading{
+        width: 320px;
+    }
+    .contact .content-left img{
+        max-width: 300px;
+        width: 100%;
+        margin-top: 40px;
     }
 }
 
